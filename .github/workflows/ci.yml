@@ -14,4 +14,6 @@ jobs:
         fetch-depth: 0
     - uses: coursier/cache-action@v6
     - uses: VirtusLab/scala-cli-setup@v1
+      with:
+        power: true
     - run: scala-cli --power package --native-image wsdldl.scala -o wsdldl -- --no-fallback
